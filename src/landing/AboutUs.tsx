@@ -63,38 +63,38 @@ const ContentTitle = styled.h2`
     }
 `;
 
-const Paragraph = styled.p`
-    text-align: start;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0px;
+// const Paragraph = styled.p`
+//     text-align: start;
+//     font-size: 20px;
+//     font-weight: 300;
+//     margin: 0px;
 
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
-`;
+//     @media (max-width: 768px) {
+//         font-size: 16px;
+//     }
+// `;
 
-const ImageCard = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    gap: 30px;
+// const ImageCard = styled.div`
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     flex-direction: row;
+//     gap: 30px;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 20px;
-    }
-`;
+//     @media (max-width: 768px) {
+//         flex-direction: column;
+//         gap: 20px;
+//     }
+// `;
 
-const Image = styled.img`
-    width: 50%;
-    height: auto;
+// const Image = styled.img`
+//     width: 50%;
+//     height: auto;
 
-    @media (max-width: 768px) {
-        width: 100%;
-    }
-`;
+//     @media (max-width: 768px) {
+//         width: 100%;
+//     }
+// `;
 
 function AboutUs() {
     return (
