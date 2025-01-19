@@ -16,7 +16,7 @@ const RouteContainer = styled.div`
 function Route() {
     return (
         <RouteContainer>
-            <Title>Route</Title>
+            <Title>Ruta</Title>
             <Map />
         </RouteContainer>
     )

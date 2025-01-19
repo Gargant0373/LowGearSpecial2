@@ -59,30 +59,30 @@ const ticketTypes = [
         price: 25,
         priceDiscounted: 30,
         title: "MOTO",
-        description: "Join with your motorcycle."
+        description: "Alatura-te aventurii cu o motocicleta."
     },
     {
         color1: "#F29FA2",
         color2: "#FD67BA",
         price: 50,
         priceDiscounted: 60,
-        title: "GANG",
-        description: "Join with one car."
+        title: "CU GASCA",
+        description: "Impreuna intr-o masina imputita."
     },
     {
         color1: "#0093FF",
         color2: "#00C6F6",
         price: 100,
         priceDiscounted: 120,
-        title: "FAMILY",
-        description: "Join with two cars."
+        title: "CU FAMILIA",
+        description: "Doua masini, doua echipaje."
     }
 ]
 
 function Tickets() {
     return (
         <TicketsContainer>
-            <TicketTitle>TICKETS</TicketTitle>
+            <TicketTitle>BILETE</TicketTitle>
             <TicketItemContainer>
                 {ticketTypes.map((ticket) => (
                     <Ticket key={ticket.title} {...ticket} />

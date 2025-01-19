@@ -43,8 +43,8 @@ function MoreInfo() {
     return (
         <MoreInfoContainer>
             <MoreInfoContent>
-                <Title>Still not convinced?</Title>
-                <Subtitle>Sign up for our newsletter and get the latest news and updates!</Subtitle>
+                <Title>Inca nu te-am convins?</Title>
+                <Subtitle>Inscrie-te la newsletter pentru mai multe informatii!</Subtitle>
                 <Newsletter />
             </MoreInfoContent>
             <Socials />

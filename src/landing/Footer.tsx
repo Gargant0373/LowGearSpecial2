@@ -139,22 +139,21 @@ function Footer() {
             <Divider />
             <Row>
                 <Column>
-                    <h2>Company</h2>
-                    <a href="#">About Us</a>
+                    <h2>Companie</h2>
+                    <a href="#">Despre Noi</a>
                     <a href="#">Contact</a>
-                    <a href="#">Contribute</a>
+                    <a href="#">Contribuie</a>
                 </Column>
                 <Column>
-                    <h2>Services</h2>
-                    <a href="#">Tickets</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Events</a>
+                    <h2>Servicii</h2>
+                    <a href="#">Bilete</a>
+                    <a href="#">Program</a>
                 </Column>
                 <Column>
                     <h2>Legal</h2>
-                    <a onClick={() => openModal("Terms of Service", "TOS content goes here.")}>Terms of Service</a>
-                    <a onClick={() => openModal("Privacy Policy", "Privacy content goes here.")}>Privacy Policy</a>
-                    <a onClick={() => openModal("Cookies Policy", "Cookies content goes here.")}>Cookies Policy</a>
+                    <a onClick={() => openModal("Termeni și Conditii", "Continutul TOS aici.")}>Termeni și Condiții</a>
+                    <a onClick={() => openModal("Politica de Confidențialitate", "Conținutul Politicii de Confidențialitate aici.")}>Politica de Confidențialitate</a>
+                    <a onClick={() => openModal("Politica privind Cookies", "Conținutul Politicii privind Cookies aici.")}>Politica privind Cookies</a>
                 </Column>
             </Row>
             <Row justifyContent="space-evenly">
@@ -165,6 +164,7 @@ function Footer() {
                 <Modal title={modalTitle} content={modalContent} onClose={closeModal} />
             )}
         </FooterContainer>
+
     );
 }
 
