@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.0",
     "@mui/material": "^6.4.0",
+    "@turf/turf": "^7.2.0",
     "leaflet": "^1.9.4",
     "lowgearspecial": "file:",
     "react": "^18.3.1",

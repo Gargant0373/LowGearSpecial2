@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Subtitle, Title } from "../components/MISC";
-import Newsletter from "../components/Newsletter";
 import Socials from "../components/Socials";
 
 const MoreInfoContainer = styled.div`
@@ -12,7 +11,7 @@ const MoreInfoContainer = styled.div`
     align-items: center;
     gap: 60px;
 
-    height: 500px;
+    height: 400px;
 
     text-align: start;
 
@@ -44,8 +43,7 @@ function MoreInfo() {
         <MoreInfoContainer>
             <MoreInfoContent>
                 <Title>Inca nu te-am convins?</Title>
-                <Subtitle>Inscrie-te la newsletter pentru mai multe informatii!</Subtitle>
-                <Newsletter />
+                <Subtitle>Contactaza-ne pe Social Media!</Subtitle>
             </MoreInfoContent>
             <Socials />
         </MoreInfoContainer>

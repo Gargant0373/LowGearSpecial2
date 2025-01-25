@@ -31,7 +31,7 @@ function Navbar() {
     return (
         <NavbarContainer>
             <Navitem>LOWGEAR <Smol>20→30 August 2025</Smol></Navitem>
-            <Date>DRUMUL MERGE INAINTE!</Date>
+            <Date>IF IN DOUBT, FLAT OUT!</Date>
         </NavbarContainer>
     )
 }

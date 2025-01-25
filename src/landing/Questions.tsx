@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { useModal } from "../hooks/useModal";
+import { Modal } from "../components/Modal";
 
 const QuestionsContainer = styled.div`
     display: flex;
@@ -63,27 +65,49 @@ const questions = [
     {
         question: "Despre costuri",
         answer: "Multe lucruri frumoase sunt scumpe. Poti face aceasta aventura sa se incadreze in orice buget. Pe langa costul de inscriere si combustibilul pentru 2000 de km, poti alege sa mananci doar la Lidl si sa campezi in spatiul public. Anul trecut o echipa a atins performanta de a cumpara masina si de a termina expeditia cu 1000e."
+    },
+    {
+        question: "Mai multe informatii",
+        answer: "" // This will trigger the modal
     }
-]
+];
 
 function Questions() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const { isOpen, modalTitle, modalContent, openModal, closeModal } = useModal();
 
     const toggleContent = (index: number) => {
-        setOpenIndex(openIndex === index ? null : index);
+        if (index === questions.length - 1) {
+            // Open modal for the last question
+            openModal("Mai multe informatii", "Aici poti afla mai multe informatii despre eveniment...");
+        } else {
+            // Toggle question expansion for others
+            setOpenIndex(openIndex === index ? null : index);
+        }
     };
 
     return (
-        <QuestionsContainer>
-            {questions.map((q, i) => (
-                <Question key={i}>
-                    <QuestionBar onClick={() => toggleContent(i)}>
-                        <QuestionArrow>{openIndex === i ? '🢃' : '🢂'}</QuestionArrow>{q.question}
-                    </QuestionBar>
-                    {openIndex === i && <QuestionContent>{q.answer}</QuestionContent>}
-                </Question>
-            ))}
-        </QuestionsContainer>
+        <>
+            <QuestionsContainer>
+                {questions.map((q, i) => (
+                    <Question key={i}>
+                        <QuestionBar onClick={() => toggleContent(i)}>
+                            <QuestionArrow>{openIndex === i && i !== questions.length - 1 ? '🢃' : '🢂'}</QuestionArrow>
+                            {q.question}
+                        </QuestionBar>
+                        {openIndex === i && i !== questions.length - 1 && (
+                            <QuestionContent dangerouslySetInnerHTML={{ __html: q.answer }} />
+                        )}
+                    </Question>
+                ))}
+            </QuestionsContainer>
+            <Modal
+                isOpen={isOpen}
+                title={modalTitle}
+                content={modalContent}
+                onClose={closeModal}
+            />
+        </>
     );
 }
 

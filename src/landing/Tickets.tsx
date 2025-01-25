@@ -54,28 +54,22 @@ const TicketItemContainer = styled.div`
 
 const ticketTypes = [
     {
-        color1: "#FE0400",
-        color2: "#F66700",
-        price: 25,
-        priceDiscounted: 30,
-        title: "MOTO",
-        description: "Alatura-te aventurii cu o motocicleta."
-    },
-    {
         color1: "#F29FA2",
         color2: "#FD67BA",
         price: 50,
         priceDiscounted: 60,
-        title: "CU GASCA",
-        description: "Impreuna intr-o masina imputita."
+        title: "I Masina",
+        description: "Pentru tine si camarazii tai.",
+        href: "https://www.google.com"
     },
     {
         color1: "#0093FF",
         color2: "#00C6F6",
         price: 100,
         priceDiscounted: 120,
-        title: "CU FAMILIA",
-        description: "Doua masini, doua echipaje."
+        title: "II Masini",
+        description: "Pentru toata gasca ta.",
+        href: "https://www.google.com"
     }
 ]
 
@@ -85,7 +79,12 @@ function Tickets() {
             <TicketTitle>BILETE</TicketTitle>
             <TicketItemContainer>
                 {ticketTypes.map((ticket) => (
-                    <Ticket key={ticket.title} {...ticket} />
+                    <a key={ticket.title} href={ticket.href} target="_blank" rel="noopener noreferrer" style={{
+                        textDecoration: "none",
+                        color: "inherit"
+                    }}>
+                        <Ticket {...ticket} />
+                    </a>
                 ))}
             </TicketItemContainer>
         </TicketsContainer>

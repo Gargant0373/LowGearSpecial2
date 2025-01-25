@@ -101,7 +101,7 @@ function AboutUs() {
         <AboutUsContainer>
             <IntroContainer>
                 <Title>Despre ce este vorba?</Title>
-                <Subtitle>Rable in padure!</Subtitle>
+                <Subtitle>Cu rablele in Aventura!</Subtitle>
             </IntroContainer>
             <ContentContainer>
                 <ContentCard>
@@ -121,7 +121,7 @@ function AboutUs() {
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <DirectionsCarIcon /> Masina sub 1500EUR
+                        <DirectionsCarIcon /> Masina sub 1500EUR*
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
