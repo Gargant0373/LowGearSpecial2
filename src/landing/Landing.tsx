@@ -6,11 +6,13 @@ import Navbar from "./Navbar";
 import Questions from "./Questions";
 import Route from "./Route";
 import Tickets from "./Tickets";
+import Video from "./Video";
 
 function Landing() {
     return <>
         <Navbar />
         <Hero />
+        <Video />
         <Tickets />
         <AboutUs />
         <Route />
