@@ -592,7 +592,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-`;function h3(){return E.jsx(c3,{children:E.jsx(f3,{src:"/promo.mov",autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:E.jsx("track",{kind:"captions",label:"Video"})})})}function d3(){return E.jsxs(E.Fragment,{children:[E.jsx(h5,{}),E.jsx(Wk,{}),E.jsx(h3,{}),E.jsx(u3,{}),E.jsx(zk,{}),E.jsx(Q5,{}),E.jsx(a5,{}),E.jsx(_5,{}),E.jsx(Rk,{})]})}const p3=Q.div`
+`;function h3(){return E.jsx(c3,{children:E.jsx(f3,{src:"./promo.mov",autoPlay:!0,muted:!0,loop:!0,playsInline:!0,children:E.jsx("track",{kind:"captions",label:"Video"})})})}function d3(){return E.jsxs(E.Fragment,{children:[E.jsx(h5,{}),E.jsx(Wk,{}),E.jsx(h3,{}),E.jsx(u3,{}),E.jsx(zk,{}),E.jsx(Q5,{}),E.jsx(a5,{}),E.jsx(_5,{}),E.jsx(Rk,{})]})}const p3=Q.div`
     padding: 20px;
     font-family: Arial, sans-serif;
 `,m3=Q.h1`
