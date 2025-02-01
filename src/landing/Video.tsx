@@ -6,6 +6,9 @@ const VideoContainer = styled.div`
   overflow: hidden;
   background-color: #FF0000;
   position: relative;
+  @media (max-width: 768px) {
+    height: 50vh;
+  }
 `;
 
 const VideoElement = styled.video`
