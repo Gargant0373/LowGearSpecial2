@@ -26,7 +26,7 @@ const markers: { name: string; type: string; coordinates: LatLngTuple; offset: [
     { name: "Somn Ziua 6", type: "Rest", coordinates: [43.03910745333883, 25.613894642711315], offset: [-0.03, 0] },
     { name: "Monument 6", type: "Monument", coordinates: [43.299390303900054, 26.930331544760747], offset: [-0.04, 0] },
     { name: "Priveliste Final", type: "Viewpoint", coordinates: [43.26610551304425, 27.772381518563986], offset: [-0.03, 0] },
-    { name: "Finish", type: "Finish", coordinates: [43.49183423094785, 28.581223530778136], offset: [0, 0] },
+    { name: "Finish", type: "Start", coordinates: [43.49183423094785, 28.581223530778136], offset: [0, 0] },
 ];
 
 const typeIcons: { [key: string]: any } = {
@@ -49,10 +49,6 @@ const typeIcons: { [key: string]: any } = {
     Monument: divIcon({
         className: "custom-icon",
         html: '<i class="fas fa-landmark" style="color: black; font-size: 18px; font-weight: bold;"></i>',
-    }),
-    Finish: divIcon({
-        className: "custom-icon",
-        html: '<i class="fas fa-checkered-flag" style="color: black; font-size: 18px; font-weight: bold;"></i>',
     }),
 };
 

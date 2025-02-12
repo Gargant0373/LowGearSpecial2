@@ -6,12 +6,13 @@ const MoreInfoContainer = styled.div`
     background-color: var(--background2);
 
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 60px;
 
-    height: 400px;
+    height: min-content;
+    
+    padding: 40px 0;
 
     text-align: start;
 
@@ -38,12 +39,23 @@ const MoreInfoContent = styled.div`
     }
 `;
 
+const YoutubeVideo = styled.iframe`
+    width: auto;
+    height: 450px;
+    display: flex;
+
+    @media (max-width: 768px) {
+        height: 300px;
+    }
+`;
+
 function MoreInfo() {
     return (
         <MoreInfoContainer>
             <MoreInfoContent>
                 <Title>Inca nu te-am convins?</Title>
-                <Subtitle>Contactaza-ne pe Social Media!</Subtitle>
+                <Subtitle>Descopera editia din 2024</Subtitle>
+                <YoutubeVideo width="auto" height="400px" src="https://www.youtube.com/embed/7NTDJglS0YY?si=FlU9MPq95sAtlBpl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
             </MoreInfoContent>
             <Socials />
         </MoreInfoContainer>

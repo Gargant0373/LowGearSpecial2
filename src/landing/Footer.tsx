@@ -52,6 +52,10 @@ const Column = styled.div`
     @media (min-width: 769px) {
         width: auto;
     }
+
+    a {
+        cursor: pointer;
+    }
 `;
 
 const Divider = styled.hr`
@@ -65,10 +69,15 @@ const Image = styled.img<{ width?: string }>`
     height: auto;
 `;
 
+const tosModal =
+    `
+    Descarca TOS <a href="./docs/tos.pdf" target="_blank">aici</a>.
+    `
+
 function Footer() {
     const { isOpen, modalTitle, modalContent, openModal, closeModal } = useModal();
 
-    return (
+    return <>
         <FooterContainer>
             <Image src="./images/G.png" />
             <Divider />
@@ -85,7 +94,7 @@ function Footer() {
                 </Column>
                 <Column>
                     <h2>Legal</h2>
-                    <a onClick={() => openModal("Termeni și Conditii", "Continutul TOS aici.")}>
+                    <a onClick={() => openModal("Termeni și Conditii", tosModal)}>
                         Termeni și Condiții
                     </a>
                     <a onClick={() => openModal("Politica de Confidențialitate", "Conținutul Politicii de Confidențialitate aici.")}>
@@ -104,14 +113,14 @@ function Footer() {
                     <Image width="auto" src="./images/SOL.png" />
                 </a>
             </Row>
-            <Modal
-                isOpen={isOpen}
-                title={modalTitle}
-                content={modalContent}
-                onClose={closeModal}
-            />
         </FooterContainer>
-    );
+        <Modal
+            isOpen={isOpen}
+            title={modalTitle}
+            content={modalContent}
+            onClose={closeModal}
+        />
+    </>
 }
 
 export default Footer;

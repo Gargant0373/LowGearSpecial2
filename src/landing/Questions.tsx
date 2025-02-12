@@ -85,22 +85,35 @@ const questions = [
   {
     question: "Despre eveniment",
     answer:
-      "LowGear e un eveniment care te ghideaza sa ajungi la mama dracului unde e surprinzator de frumos. Te incurajam sa ajugi prin toate locurile astea cu o masian de pana in 1500. Scopul nostru este sa te intrebi la finish, “Cum ne-a dus rabala asta pe acolo si a rezistat?”. Ziua conducem si exploram locurile atipice iar seara stam la povesti si dormim la cort. "
+      `
+      LowGear e aventura care te duce la mama dracului, dar, surpriză, descoperi că e al naibii de frumos pe-acolo! Provocarea? Să ajungi în toate colțurile ăstea cu o mașină de până în 1500€. Da, ai citit bine – o rablă simpatică și curajoasă.<br /><br />
+      La final, garantăm o singură întrebare pe buzele tale: „Cum ne-a dus bucata asta de fier și n-a cedat pe drum?!”. Ziua o petrecem explorând locuri atipice, făcând ture nebune, iar seara? Ne strângem la povești, râdem, mâncăm și dormim la cort sub un cer plin de stele.<br /><br />
+      Iar la finish, ce crezi? Petrecem pe malul mării, votăm cele mai șmechere 3 echipaje și le premiem cu trofee, premii și o tonă de aplauze!
+      `
   },
   {
     question: "Despre traseu",
     answer:
-      "Traseul este pregatit cu de toate pentru fiecare zi: offroad, drumuri panoramice, monumente si locuri abandonate. Stim ca nu toti au acelasi ritm asa ca daca vrei sa vizitezi mai ai locatii bonus de vazut. Fiecare noapte ai de ales intre camping organizatpe sau spatiu public. Alegerea e a ta dar distractia e asigurata."
+      `
+      Traseul nostru are de toate pentru toți: un pic de offroad ca să-ți pui adrenalina la treabă, drumuri panoramice de vis, monumente care îți fac ochii mari și locuri abandonate care-ți stârnesc curiozitatea. Nu te grăbim, fiecare merge în ritmul lui, iar dacă ai chef să descoperi și mai multe, te așteaptă locații bonus – doar bune de explorat!<br /><br />
+      Când vine noaptea, ai două opțiuni: camping organizat, cu vibe de tabără, sau campat în spațiu public, pentru cei care vor să fie mai aventuroși. Alegerea e a ta, dar un lucru e sigur: distracția e garantată până în seara!
+      `
   },
   {
     question: "Despre masina",
     answer:
-      "Masina trebuie sa coste pana in 1500e. Cu cat iti pasa mai putin de masina cu atat este mai distractiv. Pregateste-o de neprevazut, fa niste modificari pentru offroad dar cel mai important lucru este sa fie a ta. Pune-i stickere, vopseste-o, fa-i tot ce vrei in limita legii. Daca ai tupeu vii cu masina personala."
+      `
+      Mașina ta nu trebuie să fie ceva WOW – trebuie să coste până în 1500€. Cu cât te stresezi mai puțin ca o lovesti, cu atât distracția e mai mare! Pregătește-o pentru orice nebunie: adaugă-i chestii pentru offroad, personalizeaz-o și, cel mai important este să fie a ta.<br /><br />
+      Pune-i stickere trăznite, vopsește-o ca pe un curcubeu sau fă-i orice îți trece prin cap (cât timp e legal). Iar dacă te ține curajul, hai direct cu mașina personală – să vedem cât de departe ajunge! 🚗🎨
+      `
   },
   {
     question: "Despre costuri",
     answer:
-      "Multe lucruri frumoase sunt scumpe. Poti face aceasta aventura sa se incadreze in orice buget. Pe langa costul de inscriere si combustibilul pentru 2000 de km, poti alege sa mananci doar la Lidl si sa campezi in spatiul public. Anul trecut o echipa a atins performanta de a cumpara masina si de a termina expeditia cu 1000e."
+      `
+      Cine zice că lucrurile frumoase trebuie să fie scumpe? Aventura asta se poate încadra în orice buget, dacă ești un pic creativ! Pe lângă costul de înscriere și combustibilul pentru 2000 de kilometri, poți face magie: mănânci smart de la supermarket și campezi pe gratis în spațiul public.<br /><br />
+      Fun fact: anul trecut, o echipă a reușit să cumpere mașina, să termine expediția și să nu depășească 1000€. Deci, dacă ei au putut, tu ce scuză mai ai? 🚗💸
+      `
   },
   {
     question: "Mai multe informatii",
@@ -108,13 +121,17 @@ const questions = [
   }
 ];
 
+const moreInfoModal = `
+  Descarca <a href="./docs/roadbook.pdf" target="_blank">aici</a> documentul cu mai multe informatii despre eveniment.
+`
+
 function Questions() {
   const [openIndex, setOpenIndex] = useState(null);
   const { isOpen, modalTitle, modalContent, openModal, closeModal } = useModal();
 
   const toggleContent = (index: any) => {
     if (index === questions.length - 1) {
-      openModal("Mai multe informatii", "Aici poti afla mai multe informatii despre eveniment...");
+      openModal("Mai multe informatii", moreInfoModal);
     } else {
       setOpenIndex(openIndex === index ? null : index);
     }

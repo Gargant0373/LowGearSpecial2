@@ -17,6 +17,10 @@ const Navitem = styled.span`
   color: #FFF;
   font-size: 20px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   @media (min-width: 768px) {
     font-size: 30px;
   }

@@ -15,23 +15,45 @@ const ModalOverlay = styled.div`
 
 const ModalContent = styled.div`
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
+    width: 95%;
+    max-width: 700px;
+    text-align: left;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    h2 {
+        margin-bottom: 15px;
+        color: var(--strong-red);
+    }
+
+    p {
+        line-height: 1.6;
+    }
 
     button {
         margin-top: 20px;
-        padding: 10px 20px;
+        padding: 12px 24px;
         background-color: #007BFF;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-size: 16px;
 
         &:hover {
             background-color: #0056b3;
+        }
+    }
+
+    a {
+        color: var(--strong-red);
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #0000FF;
         }
     }
 `;
@@ -53,7 +75,7 @@ export function Modal({
         <ModalOverlay onClick={onClose}>
             <ModalContent onClick={(e) => e.stopPropagation()}>
                 <h2>{title}</h2>
-                <p>{content}</p>
+                <div dangerouslySetInnerHTML={{ __html: content || "" }}></div>
                 <button onClick={onClose}>Close</button>
             </ModalContent>
         </ModalOverlay>

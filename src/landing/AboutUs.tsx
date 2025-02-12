@@ -101,7 +101,7 @@ function AboutUs() {
         <AboutUsContainer>
             <IntroContainer>
                 <Title>Despre ce este vorba?</Title>
-                <Subtitle>Cu rablele in Aventura!</Subtitle>
+                <Subtitle>Cu rable in Aventura!</Subtitle>
             </IntroContainer>
             <ContentContainer>
                 <ContentCard>
