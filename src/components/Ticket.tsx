@@ -103,10 +103,10 @@ function Ticket({ color1, color2, price, priceDiscounted, title, description }: 
                     {isEarlyBird && priceDiscounted && (
                         <>
                             <Countdown>Early Bird!</Countdown>
-                            <PriceDiscounted>${price}</PriceDiscounted>
+                            <PriceDiscounted>€{price}</PriceDiscounted>
                         </>
                     )}
-                    <Price>${isEarlyBird ? priceDiscounted : price}</Price>
+                    <Price>€{isEarlyBird ? priceDiscounted : price}</Price>
                 </PriceContainer>
             </Content>
         </TicketContainer>

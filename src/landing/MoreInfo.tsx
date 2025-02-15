@@ -39,14 +39,19 @@ const MoreInfoContent = styled.div`
     }
 `;
 
-const YoutubeVideo = styled.iframe`
-    width: auto;
-    height: 450px;
-    display: flex;
+const YoutubeVideoWrapper = styled.div`
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+`;
 
-    @media (max-width: 768px) {
-        height: 300px;
-    }
+const YoutubeVideo = styled.iframe`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 `;
 
 function MoreInfo() {
@@ -55,7 +60,9 @@ function MoreInfo() {
             <MoreInfoContent>
                 <Title>Inca nu te-am convins?</Title>
                 <Subtitle>Descopera editia din 2024</Subtitle>
-                <YoutubeVideo width="auto" height="400px" src="https://www.youtube.com/embed/7NTDJglS0YY?si=FlU9MPq95sAtlBpl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
+                <YoutubeVideoWrapper>
+                    <YoutubeVideo src="https://www.youtube.com/embed/7NTDJglS0YY?si=FlU9MPq95sAtlBpl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
+                </YoutubeVideoWrapper>
             </MoreInfoContent>
             <Socials />
         </MoreInfoContainer>

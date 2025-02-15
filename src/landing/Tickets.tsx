@@ -6,16 +6,17 @@ import { Modal } from "../components/Modal";
 const TicketsContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 500px;
   background-color: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 40px;
+  padding: 50px 0;
 
   @media (max-width: 768px) {
     height: auto;
-    padding-bottom: 20px;
+    gap: 30px;
   }
 `;
 
@@ -25,6 +26,7 @@ const TicketTitle = styled.h1`
   font-size: 70px;
   color: #fff;
   text-align: center;
+  margin: 0;
   
   @media (max-width: 768px) {
     font-size: 50px;
@@ -45,10 +47,6 @@ const TicketItemContainer = styled.div`
   @media (max-width: 768px) {
     gap: 20px;
   }
-
-  @media (max-width: 480px) {
-    gap: 10px;
-  }
 `;
 
 const ticketTypes = [
@@ -67,7 +65,7 @@ const ticketTypes = [
     price: 360,
     priceDiscounted: 260,
     title: "2 Masini",
-    description: "Pentru toata gasca ta.",
+    description: "Pentru tine si toata gasca ta.",
     href: "https://www.google.com"
   }
 ];

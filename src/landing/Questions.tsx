@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useModal } from "../hooks/useModal";
 import { Modal } from "../components/Modal";
 import Slider from "react-slick";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -65,19 +67,35 @@ const QuestionArrow = styled.span`
   }
 `;
 
+const QuestionContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 90%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+`
+
 const QuestionContent = styled.div`
-  width: 80%;
-  margin: 5px auto;
+  width: 40%;
   padding: 20px;
   font-size: 25px;
   text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
     font-size: 20px;
     padding: 15px;
   }
+
   @media (max-width: 480px) {
-    width: 95%;
     font-size: 18px;
     padding: 10px;
   }
@@ -89,7 +107,7 @@ const StyledSlider = styled(Slider)`
 `;
 
 const StyledSliderImage = styled.img`
-  width: 90%;
+  width: 100%;
   display: inherit;
   margin: 0 auto;
 `
@@ -99,7 +117,6 @@ const StyledSliderDiv = styled.div`
   height: auto;
 
   margin: 0 auto;
-  padding-bottom: 50px;
 
   @media (max-width: 768px) {
     width: 80%;
@@ -107,11 +124,7 @@ const StyledSliderDiv = styled.div`
 `;
 
 const StyledSingleImage = styled.img`
-  width: 30%;
-
-  @media (max-width: 768px) {
-    width: 90%;
-  }
+  width: 100%;
 `
 
 const questions = [
@@ -194,7 +207,7 @@ function Questions() {
   };
 
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -209,11 +222,11 @@ function Questions() {
         {questions.map((q, i) => (
           <Question key={i}>
             <QuestionBar onClick={() => toggleContent(i)}>
-              <QuestionArrow>{openIndex === i && i !== questions.length - 1 ? '🢃' : '🢂'}</QuestionArrow>
+              <QuestionArrow>{openIndex === i && i !== questions.length - 1 ? <ChevronRightIcon /> : <ExpandMoreIcon />}</QuestionArrow>
               {q.question}
             </QuestionBar>
             {openIndex === i && i !== questions.length - 1 && (
-              <div>
+              <QuestionContainer>
                 <QuestionContent dangerouslySetInnerHTML={{ __html: q.answer }} />
                 {q.pictures && q.pictures.length > 1 && (
                   <StyledSliderDiv>
@@ -227,15 +240,11 @@ function Questions() {
                   </StyledSliderDiv>
                 )}
                 {q.pictures && q.pictures.length === 1 && (
-                  <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    margin: "20px 0"
-                  }}>
+                  <StyledSliderDiv>
                     <StyledSingleImage src={q.pictures[0]}></StyledSingleImage>
-                  </div>
+                  </StyledSliderDiv>
                 )}
-              </div>
+              </QuestionContainer>
             )}
           </Question>
         ))}
