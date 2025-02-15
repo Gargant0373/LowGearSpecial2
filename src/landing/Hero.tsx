@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { scrollToElement } from "../utils";
 
 const HeroContainer = styled.div`
   position: relative;
@@ -113,7 +114,7 @@ function Hero() {
                 SPECIAL<br />
               </Column>
             </Row>
-            <HeroButton>GET TICKETS</HeroButton>
+            <HeroButton onClick={() => scrollToElement("tickets")}>GET TICKETS</HeroButton>
           </Column>
         </HeroAbsoluteWrapper>
       </HeroBackgroundWrapper>

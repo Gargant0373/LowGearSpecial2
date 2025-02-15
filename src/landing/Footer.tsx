@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useModal } from "../hooks/useModal";
 import { Modal } from "../components/Modal";
+import { scrollToElement } from "../utils";
 
 const FooterContainer = styled.footer`
     background-color: hsl(0, 0.00%, 89.00%);
@@ -70,13 +71,9 @@ const tosModal =
     Descarca TOS <a href="./docs/tos.pdf" target="_blank">aici</a>.
     `
 
-function Footer() {
+    function Footer() {
     const { isOpen, modalTitle, modalContent, openModal, closeModal } = useModal();
 
-    const scrollTo = (id: string) => {
-        const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: "smooth" });
-    }
 
     return <>
         <FooterContainer>
@@ -84,10 +81,10 @@ function Footer() {
             <Divider />
             <Row>
                 <Column>
-                    <a onClick={() => scrollTo("contact")}>Contact</a>
+                    <a onClick={() => scrollToElement("contact")}>Contact</a>
                 </Column>
                 <Column>
-                    <a onClick={() => scrollTo("tickets")}>Bilete</a>
+                    <a onClick={() => scrollToElement("tickets")}>Bilete</a>
                 </Column>
                 <Column>
                     <a onClick={() => openModal("Termeni și Conditii", tosModal)}>
