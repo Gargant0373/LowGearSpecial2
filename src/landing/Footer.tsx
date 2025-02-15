@@ -12,19 +12,15 @@ const FooterContainer = styled.footer`
     gap: 15px;
 
     a {
-        color: #222;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        color: #FF0000;
         text-decoration: none;
 
         &:hover {
             text-decoration: underline;
         }
-    }
-
-    h2 {
-        font-size: 20px;
-        font-weight: 700;
-        margin: 0;
-        color: #FF0000;
     }
 `;
 
@@ -77,31 +73,25 @@ const tosModal =
 function Footer() {
     const { isOpen, modalTitle, modalContent, openModal, closeModal } = useModal();
 
+    const scrollTo = (id: string) => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth" });
+    }
+
     return <>
         <FooterContainer>
             <Image src="./images/G.png" />
             <Divider />
             <Row>
                 <Column>
-                    <h2>Companie</h2>
-                    <a href="#">Despre Noi</a>
-                    <a href="#">Contact</a>
+                    <a onClick={() => scrollTo("contact")}>Contact</a>
                 </Column>
                 <Column>
-                    <h2>Servicii</h2>
-                    <a href="#">Bilete</a>
-                    <a href="#">Program</a>
+                    <a onClick={() => scrollTo("tickets")}>Bilete</a>
                 </Column>
                 <Column>
-                    <h2>Legal</h2>
                     <a onClick={() => openModal("Termeni și Conditii", tosModal)}>
                         Termeni și Condiții
-                    </a>
-                    <a onClick={() => openModal("Politica de Confidențialitate", "Conținutul Politicii de Confidențialitate aici.")}>
-                        Politica de Confidențialitate
-                    </a>
-                    <a onClick={() => openModal("Politica privind Cookies", "Conținutul Politicii privind Cookies aici.")}>
-                        Politica privind Cookies
                     </a>
                 </Column>
             </Row>

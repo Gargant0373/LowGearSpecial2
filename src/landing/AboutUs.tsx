@@ -106,12 +106,12 @@ function AboutUs() {
             <ContentContainer>
                 <ContentCard>
                     <ContentTitle>
-                        <ChildCareIcon /> 7 zile de aventura
+                        <ChildCareIcon /> 7 zile de aventură.
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <TerrainIcon /> Aventuri on si offroad prin Muntii Carpati si Balcani
+                        <TerrainIcon /> Aventuri on și off-road prin Munții Carpați și Balcani.
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
@@ -121,7 +121,7 @@ function AboutUs() {
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <DirectionsCarIcon /> Masina sub 1500EUR*
+                        <DirectionsCarIcon /> Mașina sub 1500EUR*
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>

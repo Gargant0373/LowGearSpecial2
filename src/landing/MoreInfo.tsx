@@ -56,10 +56,10 @@ const YoutubeVideo = styled.iframe`
 
 function MoreInfo() {
     return (
-        <MoreInfoContainer>
+        <MoreInfoContainer id="contact">
             <MoreInfoContent>
-                <Title>Inca nu te-am convins?</Title>
-                <Subtitle>Descopera editia din 2024</Subtitle>
+                <Title>Încă nu te-am convins?</Title>
+                <Subtitle>Descoperă ediția din 2024</Subtitle>
                 <YoutubeVideoWrapper>
                     <YoutubeVideo src="https://www.youtube.com/embed/7NTDJglS0YY?si=FlU9MPq95sAtlBpl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
                 </YoutubeVideoWrapper>

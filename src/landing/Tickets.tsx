@@ -56,7 +56,7 @@ const ticketTypes = [
     price: 220,
     priceDiscounted: 160,
     title: "1 Masina",
-    description: "Pentru tine si camarazii tai.",
+    description: "Pentru tine și camarazii tăi.",
     href: "https://www.google.com"
   },
   {
@@ -65,7 +65,7 @@ const ticketTypes = [
     price: 360,
     priceDiscounted: 260,
     title: "2 Masini",
-    description: "Pentru tine si toata gasca ta.",
+    description: "Pentru tine și toată gașca ta.",
     href: "https://www.google.com"
   }
 ];
@@ -82,7 +82,7 @@ function Tickets() {
   const { isOpen, modalTitle, modalContent, openModal, closeModal } = useModal();
 
   return (<>
-    <TicketsContainer>
+    <TicketsContainer id="tickets">
       <TicketTitle>BILETE</TicketTitle>
       <TicketItemContainer>
         {ticketTypes.map((ticket) => (
