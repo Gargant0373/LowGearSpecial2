@@ -24,7 +24,7 @@ const VideoElement = styled.video`
 function Video() {
   return (
     <VideoContainer>
-      <VideoElement src="./promo.mov" autoPlay muted loop playsInline>
+      <VideoElement src="./promo.webm" autoPlay muted loop playsInline>
         <track kind="captions" label="Video" />
       </VideoElement>
     </VideoContainer>

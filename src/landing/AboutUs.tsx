@@ -106,12 +106,12 @@ function AboutUs() {
             <ContentContainer>
                 <ContentCard>
                     <ContentTitle>
-                        <ChildCareIcon /> 7 zile de aventură.
+                        <ChildCareIcon /> 7 zile de aventură
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <TerrainIcon /> Aventuri on și off-road prin Munții Carpați și Balcani.
+                        <TerrainIcon /> Aventuri on și off-road prin Munții Carpați și Balcani
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
