@@ -20,7 +20,7 @@ const TicketsContainer = styled.div`
   }
 `;
 
-const TicketTitle = styled.h1`https://youtu.be/1pLVhYq20Hg?feature=shared
+const TicketTitle = styled.h1`
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-size: 70px;
@@ -55,7 +55,7 @@ const ticketTypes = [
     color2: "#FD67BA",
     price: 220,
     priceDiscounted: 160,
-    title: "1 Masina",
+    title: "1 Mașină",
     description: "Pentru tine și camarazii tăi.",
     href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
   },
@@ -64,7 +64,7 @@ const ticketTypes = [
     color2: "#00C6F6",
     price: 360,
     priceDiscounted: 260,
-    title: "2 Masini",
+    title: "2 Mașini",
     description: "Pentru tine și toată gașca ta.",
     href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
   }

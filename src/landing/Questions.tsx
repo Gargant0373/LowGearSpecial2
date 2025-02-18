@@ -160,7 +160,7 @@ const questions = [
     ]
   },
   {
-    question: "Despre Mașina",
+    question: "Despre Mașină",
     answer:
       `
       Mașina ta nu trebuie să fie ceva WOW – trebuie să coste până în 1500€. Cu cât te stresezi mai puțin ca o lovesti, cu atât distracția e mai mare! Pregătește-o pentru orice nebunie: adaugă-i chestii pentru offroad, personalizeaz-o și, cel mai important este să fie a ta.<br /><br />
