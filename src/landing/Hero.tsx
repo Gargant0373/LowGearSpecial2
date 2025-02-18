@@ -15,7 +15,7 @@ const HeroBackgroundWrapper = styled.div`
   height: 500px;
   background: url('./images/LOW.GEAR.png') center repeat;
   background-size: cover;
-  animation: ${imageScroll} 7s linear infinite;
+  animation: ${imageScroll} 10s linear infinite;
   @media (max-width: 768px) {
     height: 300px;
   }
