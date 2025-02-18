@@ -1,0 +1,7 @@
+/dist/*
+/node_modules/*
+dist/*
+node_modules/*
+dist.zip
+tsconfig.app.tsbuildinfo
+package-lock.json
