@@ -61,7 +61,7 @@ function MoreInfo() {
                 <Title>Încă nu te-am convins?</Title>
                 <Subtitle>Descoperă ediția din 2024</Subtitle>
                 <YoutubeVideoWrapper>
-                    <YoutubeVideo src="https://www.youtube.com/embed/7NTDJglS0YY?si=FlU9MPq95sAtlBpl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
+                    <YoutubeVideo src="https://www.youtube.com/embed/1pLVhYq20Hg?si=z4YzV3LDR1Qj7ouT" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
                 </YoutubeVideoWrapper>
             </MoreInfoContent>
             <Socials />

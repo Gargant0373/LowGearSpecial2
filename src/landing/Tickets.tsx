@@ -20,7 +20,7 @@ const TicketsContainer = styled.div`
   }
 `;
 
-const TicketTitle = styled.h1`
+const TicketTitle = styled.h1`https://youtu.be/1pLVhYq20Hg?feature=shared
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-size: 70px;
@@ -57,7 +57,7 @@ const ticketTypes = [
     priceDiscounted: 160,
     title: "1 Masina",
     description: "Pentru tine și camarazii tăi.",
-    href: "https://www.google.com"
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
   },
   {
     color1: "#0093FF",
@@ -66,14 +66,14 @@ const ticketTypes = [
     priceDiscounted: 260,
     title: "2 Masini",
     description: "Pentru tine și toată gașca ta.",
-    href: "https://www.google.com"
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
   }
 ];
 
 const modalHtml =
   `
 Înregistrarea la eveniment e simplă. Dai click pe linkul de mai jos ce te duce către un formular.<br /><br />
-<b>Formularul de inscriere</b> <a href="https://www.google.com" target="_blank">aici</a>.<br /><br />
+<b>Formularul de inscriere</b> <a href="https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog" target="_blank">aici</a>.<br /><br />
 După ce ai completat datele în formular, vei primi factura pentru înscrierea la eveniment pe adresa ta de email. Pe factură vei avea două modalități de plată: fie prin transfer bancar, fie prin linkul de pe factură. Odată ce ai primit factura, ai la dispoziție 3 zile pentru a plăti taxa de înscriere. În caz contrar, înregistrarea va fi anulată.<br /><br />
 ** Factura pentru taxa de înscriere poate fi emisă și pentru persoane juridice. Pentru această opțiune, ne puteți contacta prin email, rețele sociale sau la telefon la +40752422685 **<br /><br />
 `
