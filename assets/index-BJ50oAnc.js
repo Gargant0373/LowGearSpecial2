@@ -262,7 +262,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   height: 500px;
   background: url('./images/LOW.GEAR.png') center repeat;
   background-size: cover;
-  animation: ${UT} 7s linear infinite;
+  animation: ${UT} 10s linear infinite;
   @media (max-width: 768px) {
     height: 300px;
   }
