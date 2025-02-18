@@ -182,6 +182,7 @@ const questions = [
       `
       Cine zice că lucrurile frumoase trebuie să fie scumpe? Aventura asta se poate încadra în orice buget, dacă ești un pic creativ! Pe lângă costul de înscriere și combustibilul pentru 2000 de kilometri, poți face magie: mănânci smart de la supermarket și campezi pe gratis în spațiul public.<br /><br />
       Fun fact: anul trecut, o echipă a reușit să cumpere mașina, să termine expediția și să nu depășească 1000€. Deci, dacă ei au putut, tu ce scuză mai ai? 🚗💸
+      *Prețul "Early Bird" este până pe data de 25 mai.
       `
   },
   {
@@ -227,7 +228,7 @@ function Questions() {
             </QuestionBar>
             {openIndex === i && i !== questions.length - 1 && (
               <QuestionContainer>
-                <QuestionContent dangerouslySetInnerHTML={{ __html: q.answer }} />
+                <QuestionContent dangerouslySetInnerHTML={{ __html: q.answer }} style={{ width: !q.pictures ? '100%' : '40%' }} />
                 {q.pictures && q.pictures.length > 1 && (
                   <StyledSliderDiv>
                     <StyledSlider {...sliderSettings}>
