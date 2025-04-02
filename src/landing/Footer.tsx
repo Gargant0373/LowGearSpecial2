@@ -71,9 +71,14 @@ const tosModal =
     Descarca TOS <a href="./docs/tos.pdf" target="_blank">aici</a>.
     `
 
-    function Footer() {
+const contactModal =
+    `
+    Paul Lambrino <a href="tel:+40756198711">+40756198711</a><br />
+    Ștef Raita <a href="tel:+40752422685">+40752422685</a><br /><br />
+    <a href="mailto:lowgearspecial@gmail.com">lowgearspecial@gmail.com</a>
+    `
+function Footer() {
     const { isOpen, modalTitle, modalContent, openModal, closeModal } = useModal();
-
 
     return <>
         <FooterContainer>
@@ -81,7 +86,7 @@ const tosModal =
             <Divider />
             <Row>
                 <Column>
-                    <a onClick={() => scrollToElement("contact")}>Contact</a>
+                    <a onClick={() => openModal("Contact", contactModal)}>Contact</a>
                 </Column>
                 <Column>
                     <a onClick={() => scrollToElement("tickets")}>Bilete</a>
