@@ -67,9 +67,9 @@ const QuestionArrow = styled.span`
   }
 `;
 
-const QuestionContainer = styled.div`
+const QuestionContainer = styled.div<{ flexDirection?: string }>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
   margin: 0 auto;
   width: 90%;
 
@@ -186,6 +186,22 @@ const questions = [
       `
   },
   {
+    question: "Contacteaza-ne!",
+    answer:
+      `
+      <p style="text-align: left; margin: 0;">
+      Ai orice fel de nalamurire si vrei sa stii acum?<br /><br />
+      Suna-ne si te vom lamuri! <br />
+      <b>Paul Lambrino </b>+40756198711<br />
+      <b>Ștef Raita </b>+40752422685 <br /><br />
+
+      Daca nu te grabesti ne poti lasa si un email:<br />
+      lowgearspecial@gmail.com
+      </p>
+      `,
+    flex: 'column'
+  },
+  {
     question: "Mai multe Informații",
     answer: ""
   }
@@ -232,7 +248,7 @@ function Questions() {
                 {q.pictures && q.pictures.length > 1 && (
                   <StyledSliderDiv>
                     <StyledSlider {...sliderSettings}>
-                      {q.pictures.map((pic, index) => (
+                      {q.pictures && q.pictures.map((pic, index) => (
                         <div>
                           <StyledSliderImage src={pic} alt={`Slide ${index + 1}`} />
                         </div>

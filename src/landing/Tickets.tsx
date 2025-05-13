@@ -67,6 +67,15 @@ const ticketTypes = [
     title: "2 Mașini",
     description: "Pentru tine și toată gașca ta.",
     href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
+  }, 
+  {
+    color1: "#00FF00",
+    color2: "#009A00",
+    price: 100,
+    priceDiscounted: 80,
+    title: "Weekend",
+    description: "Pentru cei cu timp limitat (09-10.08).",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
   }
 ];
 
