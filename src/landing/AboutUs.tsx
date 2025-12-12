@@ -101,7 +101,7 @@ function AboutUs() {
         <AboutUsContainer>
             <IntroContainer>
                 <Title>Despre ce este vorba?</Title>
-                <Subtitle>Cu rable in Aventura!</Subtitle>
+                <Subtitle>Cu rable in Aventură!</Subtitle>
             </IntroContainer>
             <ContentContainer>
                 <ContentCard>
@@ -111,7 +111,7 @@ function AboutUs() {
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <TerrainIcon /> Aventuri on și off-road prin Munții Carpați și Balcani
+                        <TerrainIcon /> Aventuri on și off-road prin Carpații Occidentali și Orientali
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
@@ -121,17 +121,17 @@ function AboutUs() {
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <DirectionsCarIcon /> Mașina sub 1500EUR*
+                        <DirectionsCarIcon /> Mașină sub 1500€* sau Motocicletă
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <GradeIcon /> Premii pentru cele mai tari echipaje
+                        <GradeIcon /> Camping Organizat la START și FINISH
                     </ContentTitle>
                 </ContentCard>
                 <ContentCard>
                     <ContentTitle>
-                        <CalendarMonthIcon /> 9-15 August 2025
+                        <CalendarMonthIcon /> 8-14 August 2026
                     </ContentTitle>
                 </ContentCard>
             </ContentContainer>

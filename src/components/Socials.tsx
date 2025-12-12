@@ -1,9 +1,9 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import styled from "styled-components";
 
-const SocialsContainer = styled.div`
+const SocialsContainer = styled.div<{ justifyContent?: string }>`
     display: flex;
-    justify-content: center;
+    justify-content: ${({ justifyContent }) => justifyContent || 'center'};
     align-items: center;
     gap: 40px;
 
@@ -12,13 +12,13 @@ const SocialsContainer = styled.div`
     }
 `;
 
-const Social = styled.a`
+const Social = styled.a<{ color?: string; hoverColor?: string }>`
     font-size: 40px;
-    color: #FFF;
+    color: ${({ color }) => color || '#FFF'};
     transition: all 0.2s;
 
     &:hover {
-        color: var(--strong-yellow);
+        color: ${({ hoverColor }) => hoverColor || 'var(--strong-yellow)'};
         transform: scale(1.1);
     }
 
@@ -46,11 +46,11 @@ const socials = [
     }
 ];
 
-function Socials() {
+function Socials({ color, hoverColor, justifyContent }: { color?: string; hoverColor?: string; justifyContent?: string }) {
     return (
-        <SocialsContainer>
+        <SocialsContainer justifyContent={justifyContent}>
             {socials.map((social, index) => (
-                <Social href={social.link} key={index} target="_blank" rel="noreferrer">
+                <Social href={social.link} key={index} target="_blank" rel="noreferrer" color={color} hoverColor={hoverColor}>
                     {social.icon}
                 </Social>
             ))}

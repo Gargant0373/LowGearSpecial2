@@ -120,7 +120,7 @@ const ticketTypes = () => {
       description: "Pentru tine și camarazii tăi.",
       deadline,
       tierName: currentTier,
-      href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
     },
     {
       color1: "#9370DB",
@@ -131,7 +131,7 @@ const ticketTypes = () => {
       description: "Pentru tine și toată gașca ta.",
       deadline,
       tierName: currentTier === "Super Early Bird" ? "Early Bird" : currentTier,
-      href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
     },
     {
       color1: "#ffff6bff",
@@ -142,7 +142,7 @@ const ticketTypes = () => {
       description: "Aventura pe două roți.",
       deadline,
       tierName: currentTier,
-      href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
     },
     {
       color1: "#FFA500",
@@ -153,7 +153,7 @@ const ticketTypes = () => {
       description: "Tu și prietenul tău cel mai bun.",
       deadline,
       tierName: currentTier,
-      href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
     },
     {
       color1: "#32CD32",
@@ -164,7 +164,7 @@ const ticketTypes = () => {
       description: "Pentru cei cu timp limitat (08-10.08).",
       deadline,
       tierName: currentTier,
-      href: "https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog"
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
     }
   ];
 
@@ -175,8 +175,6 @@ const modalHtml =
   `
 Înregistrarea la eveniment e simplă. Dai click pe linkul de mai jos ce te duce către un formular.<br /><br />
 <b>Formularul de inscriere</b> <a href="https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog" target="_blank">aici</a>.<br /><br />
-După ce ai completat datele în formular, vei primi factura pentru înscrierea la eveniment pe adresa ta de email. Pe factură vei avea două modalități de plată: fie prin transfer bancar, fie prin linkul de pe factură. Odată ce ai primit factura, ai la dispoziție 3 zile pentru a plăti taxa de înscriere. În caz contrar, înregistrarea va fi anulată.<br /><br />
-** Factura pentru taxa de înscriere poate fi emisă și pentru persoane juridice. Pentru această opțiune, ne puteți contacta prin email, rețele sociale sau la telefon la +40752422685 **<br /><br />
 `
 
 const TicketWrapper = styled.div`

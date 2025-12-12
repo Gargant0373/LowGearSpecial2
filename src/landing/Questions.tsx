@@ -7,6 +7,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Socials from "../components/Socials";
 
 const QuestionsContainer = styled.div`
   width: 100%;
@@ -70,6 +71,7 @@ const QuestionArrow = styled.span`
 const QuestionContainer = styled.div<{ flexDirection?: string }>`
   display: flex;
   flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
+  align-items: center;
   margin: 0 auto;
   width: 90%;
 
@@ -85,9 +87,6 @@ const QuestionContent = styled.div<{ hasPictures?: boolean }>`
   padding: 20px;
   font-size: 25px;
   text-align: justify;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   
   @media (max-width: 768px) {
     width: 100%;
@@ -133,18 +132,21 @@ const questions = [
     answer:
       `
       LowGear e aventura care te duce la mama dracului, dar, surpriză, descoperi că e al naibii de frumos pe-acolo! Provocarea? Să ajungi în toate colțurile ăstea cu o mașină de până în 1500€. La final, garantăm o singură întrebare pe buzele tale: „Cum ne-a adus rabla asta până aici?!”. 
-      <br />Dacă ești fan 2 roti, provocarea se schimba , tu, motociclistul trebuie sa rezisti traseului. Dar nu iti fie teama fiindcă ai prieteni in masini care sunt gata sa iti care bagajele. 
-      <br />Ziua o petrecem explorând locuri atipice, făcând ture nebune, iar seara? Ne strângem la povești, râdem, mâncăm și dormim la cort .
+      <br /><br />Dacă ești fan 2 roti, provocarea se schimbă , tu, motociclistul trebuie să reziști traseului. Dar nu îți fie teamă fiindcă ai prieteni în masini care sunt gata să îți care bagajele. 
+      <br /><br />Ziua o petrecem explorând locuri atipice, făcând ture nebune, iar seara? Ne strângem la povești, râdem, mâncăm și dormim la cort .
       `,
     pictures: [
-      "./images/start.jpg"
+      "./images/event/EVENT1.jpg",
+      "./images/event/EVENT2.jpeg",
     ]
   },
   {
     question: "Despre traseu",
     answer:
       `
-      Toate obiectivele sunt la un click distanta pe roadbook-ul nostru digital. Cu el iti alegi in fiecare zi traseul. Daca vrei offroad mai greu, alege traseele rosii iar daca nu esti pregatit sa împingi masina, alege trasee galbene sau verzi.
+      Traseul nostru are de toate pentru toți: un pic de offroad ca să-ți pui adrenalina la treabă, drumuri panoramice de vis, monumente care îți fac ochii mari și locuri abandonate care-ți stârnesc curiozitatea. Nu te grăbim, fiecare merge în ritmul lui, iar dacă ai chef să descoperi și mai multe, te așteaptă locații bonus – doar bune de explorat!
+
+      <br /><br />Toate obiectivele sunt la un click distanta pe roadbook-ul nostru digital. Cu el îți alegi în fiecare zi traseul. Dacă vrei off-road mai greu, alege traseele roșii iar dacă nu ești pregătit să împingi mașina, alege trasee galbene sau verzi. 
       `,
     pictures: [
       "./images/traseu/TRASEU1.jpeg",
@@ -161,7 +163,8 @@ const questions = [
     question: "Despre Mașină",
     answer:
       `
-      Ai deja un 4x4 si vrei o aventura? Hai direct cu el si da curaj rablelor sa urce pe urmele tale! Ai fi surprins cat de capabil poate sa fie un 2x4. 
+      Nu trebuie să ai un 4x4 ca să urci în varf de munte, doar o masină de până în 1500€ și un pic de “nesimțire”. Cu cât te stresezi mai puțin că o lovesti, cu atât distracția e mai mare și urci mai sus! Pregătește-o cum crezi tu mai bine: adaugă-i chestii pentru off-road, personalizeaz-o și, cel mai important este să fie a ta. Orice atâta timp cât este legal.
+      <br /><br />Ai deja un 4x4 și vrei o aventură? Hai direct cu el și dă curaj rablelor să urce pe urmele tale! Ai fi surprins cât de capabil poate să fie un 2x4.
       `,
     pictures: [
       "./images/masina/MASINA1.jpeg",
@@ -169,12 +172,20 @@ const questions = [
       "./images/masina/MASINA3.jpeg",
       "./images/masina/MASINA4.jpeg",
       "./images/masina/MASINA5.jpeg",
+      "./images/masina/MASINA6.jpeg",
+      "./images/masina/MASINA7.jpeg",
+      "./images/masina/MASINA8.jpeg",
+      "./images/masina/MASINA9.jpeg",
+      "./images/masina/MASINA10.jpeg",
+      "./images/masina/MASINA11.jpeg",
+      "./images/masina/MASINA12.jpeg",
     ]
   },
   {
     question: "Despre moto",
     answer: `
-    Experiența LowGear pe motocicletă e ca un mini „Dakar” pentru riderii începători și intermediari, unde traseul devine o provocare reală de anduranță. Motocicliștii și echipajele auto se ajută reciproc, de la porțiuni dificile până la căratul bagajelor și sprijin în camping. Iar la finish vei simți adevărata satisfacție: ai dus la capăt un mini Dakar de aproape 2000 km. 
+    Experiența LowGear pe motocicletă e ca un mini „Dakar” pentru riderii începători și intermediari în off-road, unde fiecare zi devine o provocare autentică de anduranță. Motocicliștii și echipajele auto se sprijină constant, fie la treceri dificile, fie la căratul bagajelor sau ajutorul din camping. În multe situații, mașinile devin sprijinul logistic perfect, permițându-ți să te bucuri de traseu fără greutăți inutile. Pe măsură ce avansezi, înveți să citești terenul, să îți dozezi energia și să îți depășești limitele fără să îți dai seama.
+    <br /><br />Legi prietenii noi, împărtășești momente intense și descoperi cât de mult poate conta o echipă bine sudată în mijlocul munților. Iar la finish, satisfacția e imensă: ai dus la capăt un mini Dakar de aproape <b>2000 km</b>, o realizare care rămâne cu tine mult timp după ce aventura s-a încheiat.
     `,
     pictures: [
       "./images/moto/MOTO1.jpeg",
@@ -188,7 +199,8 @@ const questions = [
     question: "Despre campat",
     answer:
       `
-      Campingul face parte din aventură, cu nopți în locații spectaculoase, fie în campinguri organizate, fie în zone publice de campare gratuite, toate marcate în roadbook. Ți-ai dori ca serile să țină până dimineața, să stai la povești și la grătar, dar realitatea te lovește: ziua de mâine te așteaptă cu o nouă aventură. Spiritul de echipă și comunitatea fac experiența cu adevărat memorabilă.	
+      Campingul face parte din aventură, cu nopți în locații spectaculoase, fie în campinguri organizate, fie în zone publice de campare gratuite, toate marcate în roadbook. Ești în mijlocul naturii, printre prieteni noi și vechi, iar fiecare seară are farmecul ei după o zi lungă pe traseu. Ți-ai dori ca serile să țină până dimineața, să stai la povești și la grătar, dar realitatea te lovește repede: ziua de mâine vine cu o nouă provocare. Totuși, tocmai acest ritm — aventură, odihnă, comunitate — face experiența atât de specială. Spiritul de echipă și atmosfera de tabără transformă fiecare oprire într-un moment memorabil.
+      <br /><br />La start poți campa încă din noaptea de dinainte, ca să intri în atmosferă și să întâlnești echipajele. Iar la finish, ne strângem cu toții la o petrecere ca lumea, unde apuci să stai la povești cu toată lumea pe care ai întâlnit-o de-a lungul celor 7 zile de aventură.
       `
   },
   {
@@ -196,7 +208,7 @@ const questions = [
     answer:
       `
       Pentru a vă ajuta să vă organizați bugetul pentru aventură, mai jos găsiți câteva estimări orientative. Acesta trebuie gândit pentru aproximativ 7 zile și circa 2000 km parcurși.
-      <br />Desigur, fiecare își ajustează cheltuielile în funcție de stil, nevoi și preferințe personale.
+      <br /><br />Desigur, fiecare își ajustează cheltuielile în funcție de stil, nevoi și preferințe personale.
       <br /><br />🍽 Mâncare:
       <br />30–100 lei/zi/persoană
       <br />(depinde dacă gătiți, mâncați la supermarket sau la restaurant)
@@ -221,11 +233,11 @@ const questions = [
       📞 <b>Paul Lambrino</b>: +40756198711<br />
       📞 <b>Ștef Raita</b>: +40752422685 <br /><br />
 
-      Dacă nu te grăbești, ne poți scrie și pe email:<br />
-      ✉️ lowgearspecial@gmail.com
+      Dacă nu te grăbești, ne poți scrie și pe social media:<br />
       </p>
       `,
-    flex: 'column'
+    flex: 'column',
+    hasSocials: true
   },
   {
     question: "Mai multe Informații",
@@ -269,8 +281,11 @@ function Questions() {
               {q.question}
             </QuestionBar>
             {openIndex === i && i !== questions.length - 1 && (
-              <QuestionContainer>
+              // @ts-ignore
+              <QuestionContainer flexDirection={q.flex}>
                 <QuestionContent dangerouslySetInnerHTML={{ __html: q.answer }} hasPictures={!!q.pictures} />
+                {/* @ts-ignore */}
+                {q.hasSocials && <Socials color="inherit" hoverColor="white" justifyContent="inherit" />}
                 {q.pictures && q.pictures.length > 1 && (
                   <StyledSliderDiv>
                     <StyledSlider {...sliderSettings}>

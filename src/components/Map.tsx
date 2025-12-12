@@ -21,7 +21,7 @@ const markers: { name: string; type: string; coordinates: LatLngTuple; offset: [
     { name: "Cimitirul Vesel", type: "Monument", coordinates: [47.97067467113835, 23.69503778410724], offset: [0, 0.08] },
     { name: "Memorialul Durerii", type: "Monument", coordinates: [47.927437183016124, 23.890826168564686], offset: [0, 0.08] },
     { name: "Somn Ziua 3&4", type: "Rest", coordinates: [47.745786148004065, 23.893312765909148], offset: [-0.03, 0] },
-    { name: "Barsana", type: "Monument", coordinates: [42.7435777276495, 25.401253308803586], offset: [-0.02, 0.05] }, 
+    { name: "Barsana", type: "Monument", coordinates: [47.792216576172784, 24.091113566643163], offset: [-0.02, 0.05] }, 
     { name: "Prislop", type: "Viewpoint", coordinates: [47.609469507304425, 24.855685917627422], offset: [-0.03, 0] },
     { name: "Offroad Darmoxa", type: "Offroad", coordinates: [47.184435695368, 25.553395413511424], offset: [-0.05, 0] },
     { name: "Somn Ziua 5", type: "Rest", coordinates: [46.811817313703834, 25.824188264601595], offset: [-0.03, 0] },

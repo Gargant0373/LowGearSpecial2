@@ -49,7 +49,7 @@ const Date = styled.span`
 function Navbar() {
   return (
     <NavbarContainer>
-      <Navitem>LOWGEAR <Smol>8→14 August 2025</Smol></Navitem>
+      <Navitem>LOWGEAR <Smol>8→14 August 2026</Smol></Navitem>
       <Date>IF IN DOUBT, FLAT OUT!</Date>
     </NavbarContainer>
   );
