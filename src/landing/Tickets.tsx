@@ -174,7 +174,7 @@ const ticketTypes = () => {
 const modalHtml =
   `
 Înregistrarea la eveniment e simplă. Dai click pe linkul de mai jos ce te duce către un formular.<br /><br />
-<b>Formularul de inscriere</b> <a href="https://docs.google.com/forms/d/e/1FAIpQLScaPTcNMb3OIGj1rhIekNSWXNT5TIxXqX4kmj1g2jlN_I2lZg/viewform?usp=dialog" target="_blank">aici</a>.<br /><br />
+<b>Formularul de inscriere</b> <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform" target="_blank">aici</a>.<br /><br />
 `
 
 const TicketWrapper = styled.div`
