@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Polyline, Popup, TileLayer } from "react-leaflet";
 
 const markers: { name: string; type: string; coordinates: LatLngTuple; offset: [number, number] }[] = [ 
+    { name: "Start", type: "Start", coordinates: [45.70939870852405, 24.010787333121037], offset: [0, 0] },
     { name: "Apuseni", type: "Viewpoint", coordinates: [46.32236244930637, 23.512268604839612], offset: [-0.05, 0] },
     { name: "Lac Chimic", type: "Viewpoint", coordinates: [46.327124582912155, 23.210528578378895], offset: [0.05, -0.05] },
     { name: "Somn Ziua 1", type: "Rest", coordinates: [46.303200777278306, 23.137104156090736], offset: [-0.05, 0] },
