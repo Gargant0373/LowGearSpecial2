@@ -172,19 +172,19 @@ const questions = [
       "./images/masina/MASINA3.jpeg",
       "./images/masina/MASINA4.jpeg",
       "./images/masina/MASINA5.jpeg",
-      "./images/masina/MASINA6.jpeg",
-      "./images/masina/MASINA7.jpeg",
-      "./images/masina/MASINA8.jpeg",
-      "./images/masina/MASINA9.jpeg",
-      "./images/masina/MASINA10.jpeg",
-      "./images/masina/MASINA11.jpeg",
-      "./images/masina/MASINA12.jpeg",
+      "./images/masina/MASINA6.jpg",
+      "./images/masina/MASINA7.jpg",
+      "./images/masina/MASINA8.jpg",
+      "./images/masina/MASINA9.jpg",
+      "./images/masina/MASINA10.jpg",
+      "./images/masina/MASINA11.jpg",
+      "./images/masina/MASINA12.jpg",
     ]
   },
   {
     question: "Despre moto",
     answer: `
-    Experiența LowGear pe motocicletă e ca un mini „Dakar” pentru riderii începători și intermediari în off-road, unde fiecare zi devine o provocare autentică de anduranță. Motocicliștii și echipajele auto se sprijină constant, fie la treceri dificile, fie la căratul bagajelor sau ajutorul din camping. În multe situații, mașinile devin sprijinul logistic perfect, permițându-ți să te bucuri de traseu fără greutăți inutile. Pe măsură ce avansezi, înveți să citești terenul, să îți dozezi energia și să îți depășești limitele fără să îți dai seama.
+    Experiența LowGear pe motocicletă e ca un mini „Dakar” pentru riderii începători și intermediari în off-road, unde fiecare zi devine o provocare autentică de anduranță. Motocicliștii și echipajele auto se sprijină constant, fie la treceri dificile, fie la căratul bagajelor sau ajutorul din camping. În multe situații, mașinile devin sprijinul logistic perfect, permițându-ți să te bucuri de traseu fără greutăți inutile.
     <br /><br />Legi prietenii noi, împărtășești momente intense și descoperi cât de mult poate conta o echipă bine sudată în mijlocul munților. Iar la finish, satisfacția e imensă: ai dus la capăt un mini Dakar de aproape <b>2000 km</b>, o realizare care rămâne cu tine mult timp după ce aventura s-a încheiat.
     `,
     pictures: [
@@ -231,8 +231,8 @@ const questions = [
       Ai întrebări sau nelămuriri și vrei răspunsuri rapide?<br /><br />
       Sună-ne și te vom ajuta cu plăcere!<br />
       📞 <b>Paul Lambrino</b>: +40756198711<br />
-      📞 <b>Ștef Raita</b>: +40752422685 <br /><br />
-
+      📞 <b>Ștef Raita</b>: +40752422685 <br />
+      📧 <b>Email:</b> lowgearspecial@gmail.com <br /><br />
       Dacă nu te grăbești, ne poți scrie și pe social media:<br />
       </p>
       `,

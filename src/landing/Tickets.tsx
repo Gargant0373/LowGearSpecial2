@@ -120,7 +120,7 @@ const ticketTypes = () => {
       description: "Pentru tine și camarazii tăi.",
       deadline,
       tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
     },
     {
       color1: "#9370DB",
@@ -131,7 +131,7 @@ const ticketTypes = () => {
       description: "Pentru tine și toată gașca ta.",
       deadline,
       tierName: currentTier === "Super Early Bird" ? "Early Bird" : currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
     },
     {
       color1: "#ffff6bff",
@@ -142,7 +142,7 @@ const ticketTypes = () => {
       description: "Aventura pe două roți.",
       deadline,
       tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
     },
     {
       color1: "#FFA500",
@@ -153,7 +153,7 @@ const ticketTypes = () => {
       description: "Tu și prietenul tău cel mai bun.",
       deadline,
       tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
     },
     {
       color1: "#32CD32",
@@ -164,7 +164,7 @@ const ticketTypes = () => {
       description: "Pentru cei cu timp limitat (08-10.08).",
       deadline,
       tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform?usp=sharing&ouid=105907256265998208539'
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
     }
   ];
 
