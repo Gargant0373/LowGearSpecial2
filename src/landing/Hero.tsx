@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { scrollToElement } from "../utils";
+import { ticketsAreSoldOut } from "./ticketTypes";
 
 const HeroContainer = styled.div`
   position: relative;
@@ -102,6 +103,8 @@ const Image = styled.img`
 `;
 
 function Hero() {
+  const ctaLabel = ticketsAreSoldOut() ? "SOLD OUT" : "GET TICKETS";
+
   return (
     <HeroContainer>
       <HeroBackgroundWrapper>
@@ -114,7 +117,7 @@ function Hero() {
                 SPECIAL<br />
               </Column>
             </Row>
-            <HeroButton onClick={() => scrollToElement("tickets")}>GET TICKETS</HeroButton>
+            <HeroButton onClick={() => scrollToElement("tickets")}>{ctaLabel}</HeroButton>
           </Column>
         </HeroAbsoluteWrapper>
       </HeroBackgroundWrapper>

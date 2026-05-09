@@ -5,6 +5,7 @@ interface TicketProps {
     color2: string;
     price: number;
     fullPrice?: number;
+    soldOut?: boolean;
     title: string;
     description: string;
     tierName?: string;
@@ -158,7 +159,18 @@ const TierName = styled.span`
     }
 `;
 
-function Ticket({ color1, color2, price, fullPrice, title, description, tierName }: TicketProps) {
+const SoldOut = styled.p`
+    font-size: 26px;
+    margin: 0;
+    color: var(--strong-red);
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
+`;
+
+function Ticket({ color1, color2, price, fullPrice, soldOut, title, description, tierName }: TicketProps) {
     return (
         <TicketContainer color1={color1} color2={color2}>
             <GradientStrip color1={color1} color2={color2} />
@@ -170,10 +182,16 @@ function Ticket({ color1, color2, price, fullPrice, title, description, tierName
                 <PriceContainer>
                     {tierName && <TierName>{tierName}</TierName>}
                     <PriceRow>
-                        {fullPrice && fullPrice > price && (
-                            <FullPrice>€{fullPrice}</FullPrice>
+                        {soldOut ? (
+                            <SoldOut>Sold Out</SoldOut>
+                        ) : (
+                            <>
+                                {fullPrice && fullPrice > price && (
+                                    <FullPrice>€{fullPrice}</FullPrice>
+                                )}
+                                <Price>€{price}</Price>
+                            </>
                         )}
-                        <Price>€{price}</Price>
                     </PriceRow>
                 </PriceContainer>
             </Content>

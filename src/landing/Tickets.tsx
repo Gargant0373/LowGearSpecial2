@@ -3,6 +3,7 @@ import Ticket from "../components/Ticket";
 import { useModal } from "../hooks/useModal";
 import { Modal } from "../components/Modal";
 import Countdown from "../components/Countdown";
+import { ticketTypes } from "./ticketTypes";
 
 const TicketsContainer = styled.div`
   position: relative;
@@ -53,134 +54,17 @@ const TicketItemContainer = styled.div`
   }
 `;
 
-const ticketTypes = () => {
-  const now = new Date();
-  const year = 2026;
-  
-  const superEarlyBirdEnd = new Date(`${year}-01-25T23:59:59`);
-  const earlyBirdEnd = new Date(`${year}-04-25T23:59:59`);
-  const fullPriceEnd = new Date(`${year}-08-01T23:59:59`);
-
-  let currentTier = "";
-  let deadline = "";
-  let prices = {
-    oneCar: 300,
-    twoCars: 500,
-    oneMoto: 240,
-    twoMoto: 380,
-    weekend: 150
-  };
-  let fullPrices = {
-    oneCar: 300,
-    twoCars: 500,
-    oneMoto: 240,
-    twoMoto: 380,
-    weekend: 150
-  };
-
-  if (now < superEarlyBirdEnd) {
-    currentTier = "Super Early Bird";
-    deadline = superEarlyBirdEnd.toISOString();
-    prices = {
-      oneCar: 200,
-      twoCars: 0, // Not available
-      oneMoto: 140,
-      twoMoto: 220,
-      weekend: 0 // Not available
-    };
-  } else if (now < earlyBirdEnd) {
-    currentTier = "Early Bird";
-    deadline = earlyBirdEnd.toISOString();
-    prices = {
-      oneCar: 250,
-      twoCars: 450,
-      oneMoto: 190,
-      twoMoto: 290,
-      weekend: 150
-    };
-  } else {
-    currentTier = "Full Price";
-    deadline = fullPriceEnd.toISOString();
-    prices = {
-      oneCar: 300,
-      twoCars: 500,
-      oneMoto: 240,
-      twoMoto: 380,
-      weekend: 200
-    };
-  }
-
-  const allTickets = [
-    {
-      color1: "#ADD8E6",
-      color2: "#87CEEB",
-      price: prices.oneCar,
-      fullPrice: fullPrices.oneCar,
-      title: "1 Mașină",
-      description: "Pentru tine și camarazii tăi.",
-      deadline,
-      tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
-    },
-    {
-      color1: "#9370DB",
-      color2: "#8A2BE2",
-      price: prices.twoCars,
-      fullPrice: fullPrices.twoCars,
-      title: "2 Mașini",
-      description: "Pentru tine și toată gașca ta.",
-      deadline,
-      tierName: currentTier === "Super Early Bird" ? "Early Bird" : currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
-    },
-    {
-      color1: "#ffff6bff",
-      color2: "#FFD700",
-      price: prices.oneMoto,
-      fullPrice: fullPrices.oneMoto,
-      title: "1 Moto",
-      description: "Aventura pe două roți.",
-      deadline,
-      tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
-    },
-    {
-      color1: "#FFA500",
-      color2: "#FF8C00",
-      price: prices.twoMoto,
-      fullPrice: fullPrices.twoMoto,
-      title: "2 Moto",
-      description: "Tu și prietenul tău cel mai bun.",
-      deadline,
-      tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
-    },
-    {
-      color1: "#32CD32",
-      color2: "#008000",
-      price: prices.weekend,
-      fullPrice: fullPrices.weekend,
-      title: "Weekend",
-      description: "Pentru cei cu timp limitat (08-10.08).",
-      deadline,
-      tierName: currentTier,
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform'
-    }
-  ];
-
-  return allTickets.filter(ticket => ticket.price > 0);
-};
-
 const modalHtml =
 `
 Înregistrarea la eveniment e simplă. Dai click pe linkul de mai jos ce te duce către un formular.<br /><br />
 <b>Formularul de inscriere</b> <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4I1X4MafkXhNnO2zyEjd2iyxbdPTUmWe1CPuWoveeJ8FTnQ/viewform" target="_blank">aici</a>.<br /><br />
 `
 
-const TicketWrapper = styled.div`
+const TicketWrapper = styled.div<{ $disabled: boolean }>`
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
+  cursor: ${({ $disabled }) => ($disabled ? "default" : "pointer")};
+  opacity: ${({ $disabled }) => ($disabled ? 0.8 : 1)};
   
   @media (max-width: 768px) {
     width: 100%;
@@ -203,13 +87,19 @@ function Tickets() {
         {tickets.map((ticket) => (
           <TicketWrapper
             key={ticket.title}
-            onClick={() => openModal(ticket.title, modalHtml)}
+            $disabled={ticket.soldOut}
+            onClick={() => {
+              if (!ticket.soldOut) {
+                openModal(ticket.title, modalHtml);
+              }
+            }}
           >
             <Ticket
               color1={ticket.color1}
               color2={ticket.color2}
               price={ticket.price}
               fullPrice={ticket.fullPrice}
+              soldOut={ticket.soldOut}
               title={ticket.title}
               description={ticket.description}
               tierName={ticket.tierName}
