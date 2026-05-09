@@ -59,9 +59,9 @@ function MoreInfo() {
         <MoreInfoContainer id="contact">
             <MoreInfoContent>
                 <Title>Încă nu te-am convins?</Title>
-                <Subtitle>Descoperă ediția din 2024</Subtitle>
+                <Subtitle>Descoperă ediția din 2025</Subtitle>
                 <YoutubeVideoWrapper>
-                    <YoutubeVideo src="https://www.youtube.com/embed/1pLVhYq20Hg?si=z4YzV3LDR1Qj7ouT" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
+                    <YoutubeVideo src="https://www.youtube.com/embed/1n2lsPUFS98?si=f3GRxIaxFbA_X945" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></YoutubeVideo>
                 </YoutubeVideoWrapper>
             </MoreInfoContent>
             <Socials />
